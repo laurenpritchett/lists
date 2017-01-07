@@ -286,19 +286,19 @@ def join_strings_with_comma(words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
     """
-    joined_string = ""
-    index = 0
+    new_string = ""
+
     if len(words) == 1:
         return words[0]
-    elif len(words) > 1:
-        while index < len(words) - 1:
-            for word in words:
-                joined_string += word
-                joined_string += ", "
-                index += 1
-        joined_string += words[-1]
+    elif len(words) == 0:
+        return None
+    else:
+        for index in range(0, len(words) - 1):
+            new_string += words[index]
+            new_string += ", "
+    new_string += words[-1]
 
-    return joined_string
+    return new_string
 
 
 def reverse_list(items):
