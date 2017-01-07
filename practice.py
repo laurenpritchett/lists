@@ -380,8 +380,18 @@ def duplicates(items):
         >>> orig
         ['apple', 'apple', 'berry']
     """
+    duplicate_list = []
+    unique_list = []
 
-    return [].sort()
+    for item in items:
+        if item not in unique_list:
+            unique_list.append(item)
+        elif item not in duplicate_list:
+            duplicate_list.append(item)
+        else:
+            continue
+
+    return sorted(duplicate_list)
 
 
 def find_letter_indices(words, letter):
@@ -410,7 +420,9 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
-
+    # for index in range len(words):
+    #   for index in range len(word):
+    #       
     return []
 
 #####################################################################
