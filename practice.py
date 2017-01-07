@@ -350,9 +350,7 @@ def reverse_list_in_place(items):
         ['I', 'love', 'cookies']
     """
     items[0:] = items[-1::-1]
-
-    return items
-    # not sure why doctests are expecting nothing when run.
+    # No return statement necessary because in-place returns nothing.
 
 
 def duplicates(items):
