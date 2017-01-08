@@ -424,6 +424,8 @@ def find_letter_indices(words, letter):
     new_list = []
 
     for word in words:
+        if letter not in word:
+            new_list.append(None)
         for index in range(len(word)):
             if word[index] == letter:
                 new_list.append(index)
