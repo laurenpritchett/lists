@@ -418,10 +418,17 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
-    # for index in range len(words):
-    #   for index in range len(word):
-    #       
-    return []
+    # loop through each word in the list until the letter is found
+    # add the index at which the letter is first seen to a new list
+    # return that new list
+    new_list = []
+
+    for word in words:
+        for index in range(len(word)):
+            if word[index] == letter:
+                new_list.append(index)
+
+    return new_list
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
