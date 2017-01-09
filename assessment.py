@@ -126,7 +126,11 @@ def largest_n_items(items, n):
         [3, 3]
     """
 
-    return []
+    items.sort()
+    if n == 0:
+        return []
+    else:
+        return items[-n:]
 
 
 #####################################################################
